@@ -15,7 +15,7 @@ Aplikasi ini mensimulasikan pemanggilan data cuaca secara **asinkron (AJAX)** da
 Mendukung pencarian **38 Provinsi di Indonesia** dengan fitur autocomplete dan filter otomatis.
 
 **Screenshot:**  
-`![Gambar 1 - Fitur Pencarian Provinsi](screenshots/gambar1_pencarian.png)`
+`![Gambar 1 - Fitur Pencarian Provinsi](./screenshots/gambar1_pencarian.png)`
 
 ---
 
