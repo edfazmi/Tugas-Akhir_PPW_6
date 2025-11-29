@@ -59,7 +59,7 @@ window.onload = function () {
   tampilkanFavorit();
   ambilDataCuaca();
 
-  setInterval(ambilDataCuaca, 60000);
+  setInterval(ambilDataCuaca, 300000);
 
   setInterval(updateJam, 1000);
   updateJam();
