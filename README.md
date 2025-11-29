@@ -6,7 +6,7 @@ Aplikasi ini mensimulasikan pemanggilan data cuaca secara **asinkron (AJAX)** da
 ---
 
 ## DASHBOARD
-`![Gambar 0 - Keseluruhan Dashboard](./screenshots/gambar0_keseluruhan.png)`
+![Gambar 0 - Keseluruhan Dashboard](./screenshots/gambar0_keseluruhan.png)
 
 
 ## 🚀 Fitur Utama
