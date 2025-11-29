@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>edfaCuaca Dashboard</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <script>
+      tailwind.config = { darkMode: "class" };
+    </script>
+  </head>
+  <body
+    class="bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300 min-h-screen flex flex-col"
+  >
+    <nav
+      class="bg-white dark:bg-gray-800 shadow-md transition-colors duration-300"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <div class="flex items-center gap-3">
+          <i class="fa-solid fa-cloud-sun-rain text-3xl text-blue-500"></i>
+          <div>
+            <h1 class="text-xl font-bold">edfaCuaca</h1>
+            <p class="text-xs text-gray-500">Tugas Akhir 6.4</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <button
+            onclick="gantiSatuan()"
+            class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 transition"
+          >
+            <span id="unit-display" class="font-bold">°C</span>
+          </button>
+          <button
+            onclick="gantiTema()"
+            class="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 transition"
+          >
+            <i id="theme-icon" class="fa-solid fa-moon"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main
+      class="flex-1 max-w-7xl mx-auto w-full px-4 py-6 flex flex-col md:flex-row gap-6"
+    >
+      <aside class="w-full md:w-1/3 lg:w-1/4 space-y-6">
+        <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm">
+          <label class="block text-sm font-medium mb-2">Cari Wilayah</label>
+          <div class="relative">
+            <input
+              type="text"
+              id="city-input"
+              placeholder="Ketik nama provinsi..."
+              class="w-full pl-10 pr-4 py-2 border rounded-lg dark:bg-gray-700 dark:border-gray-600 focus:outline-none"
+              onkeyup="ketikaKetikKota(event)"
+            />
+            <i
+              class="fa-solid fa-magnifying-glass absolute left-3 top-3 text-gray-400"
+            ></i>
+
+            <div
+              id="suggestions"
+              class="absolute z-10 w-full bg-white dark:bg-gray-700 border dark:border-gray-600 rounded-lg mt-1 shadow-lg hidden max-h-48 overflow-y-auto"
+            ></div>
+          </div>
+
+          <button
+            onclick="cariKota()"
+            class="w-full mt-3 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 rounded-lg transition"
+          >
+            Cari
+          </button>
+          <button
+            onclick="ambilLokasiSaya()"
+            class="w-full mt-2 bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 text-gray-800 dark:text-white font-medium py-2 rounded-lg transition text-sm"
+          >
+            <i class="fa-solid fa-location-crosshairs mr-2"></i> Lokasi Saya
+          </button>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm">
+          <div class="flex justify-between items-center mb-3">
+            <h3 class="font-bold">Wilayah Favorit</h3>
+            <i class="fa-solid fa-star text-yellow-400"></i>
+          </div>
+          <div id="favorites-list" class="space-y-2"></div>
+        </div>
+      </aside>
+
+      <section class="w-full md:w-2/3 lg:w-3/4 space-y-6 relative">
+        <div
+          id="loading"
+          class="absolute inset-0 bg-white/80 dark:bg-gray-900/80 z-20 flex flex-col items-center justify-center rounded-xl hidden"
+        >
+          <div class="loader mb-3"></div>
+          <p class="font-medium">Mengambil data...</p>
+        </div>
+
+        <div
+          class="flex justify-between items-center bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm"
+        >
+          <div>
+            <h2 id="display-city" class="text-2xl font-bold">DKI Jakarta</h2>
+            <p
+              id="display-date"
+              class="text-sm text-gray-500 dark:text-gray-400 font-mono"
+            >
+              --
+            </p>
+          </div>
+          <div class="flex gap-2">
+            <button
+              onclick="tambahKeFavorit()"
+              class="p-2 text-gray-400 hover:text-yellow-400 transition"
+              title="Simpan ke Favorit"
+            >
+              <i id="fav-icon-btn" class="fa-regular fa-star fa-lg"></i>
+            </button>
+            <button
+              onclick="ambilDataCuaca()"
+              class="p-2 text-blue-500 hover:bg-blue-50 dark:hover:bg-gray-700 rounded-full transition"
+              title="Refresh Data"
+            >
+              <i class="fa-solid fa-rotate-right fa-lg"></i>
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-6 rounded-2xl shadow-lg flex flex-col md:flex-row items-center justify-between relative overflow-hidden"
+        >
+          <i
+            class="fa-solid fa-cloud absolute -right-4 -bottom-4 text-9xl text-white opacity-20"
+          ></i>
+
+          <div class="flex items-center gap-6 z-10">
+            <div id="weather-icon" class="text-6xl">
+              <i class="fa-solid fa-cloud-sun"></i>
+            </div>
+            <div>
+              <div class="text-5xl font-bold mb-1">
+                <span id="current-temp">--</span>
+                <span class="text-2xl align-top" id="unit-label">°C</span>
+              </div>
+              <p id="weather-desc" class="text-lg font-medium opacity-90">--</p>
+            </div>
+          </div>
+
+          <div class="flex gap-8 mt-6 md:mt-0 z-10 text-center md:text-right">
+            <div>
+              <p class="text-blue-100 text-sm">Kelembaban</p>
+              <p class="font-bold text-xl">
+                <i class="fa-solid fa-droplet mr-1"></i>
+                <span id="current-humidity">--</span>%
+              </p>
+            </div>
+            <div>
+              <p class="text-blue-100 text-sm">Kecepatan Angin</p>
+              <p class="font-bold text-xl">
+                <i class="fa-solid fa-wind mr-1"></i>
+                <span id="current-wind">--</span> km/h
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="font-bold text-lg mb-3">Ramalan 5 Hari Kedepan</h3>
+          <div
+            id="forecast-grid"
+            class="grid grid-cols-2 md:grid-cols-5 gap-3"
+          ></div>
+        </div>
+
+        <p class="text-center text-xs text-gray-400 mt-8">
+          Terakhir update: <span id="last-update">--</span>
+        </p>
+      </section>
+    </main>
+
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
