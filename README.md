@@ -1,65 +1,69 @@
+---
 edfaCuaca 
 ---
 
 edfaCuaca adalah aplikasi dashboard cuaca interaktif berbasis web yang dikembangkan sebagai pemenuhan Tugas Akhir Modul 6.4 (AJAX & Web Service). Aplikasi ini mensimulasikan pemanggilan data cuaca secara asinkron (AJAX) dengan tampilan antarmuka modern dan responsif.
-
-(Ganti link di atas dengan screenshot asli aplikasimu)
 ---
 
----
+
 Fitur Unggulan
 ---
 
-Pencarian Wilayah Cerdas: Mendukung pencarian 38 Provinsi di Indonesia dengan fitur autocomplete dan filter otomatis.
+1. Pencarian Wilayah Cerdas: Mendukung pencarian 38 Provinsi di Indonesia dengan fitur autocomplete dan filter otomatis.
 
-Data Cuaca Dinamis: Menampilkan kondisi cuaca saat ini (Suhu, Kelembaban, Angin) dan ramalan cuaca untuk 5 hari ke depan.
+2. Data Cuaca Dinamis: Menampilkan kondisi cuaca saat ini (Suhu, Kelembaban, Angin) dan ramalan cuaca untuk 5 hari ke depan.
 
-Simulasi Data Real-time: Menggunakan variasi skenario data JSON (Cerah, Hujan, Badai, dll) yang diacak (randomized) untuk mensimulasikan perubahan cuaca setiap kali lokasi dipilih.
+3. Simulasi Data Real-time: Menggunakan variasi skenario data JSON (Cerah, Hujan, Badai, dll) yang diacak (randomized) untuk mensimulasikan perubahan cuaca setiap kali lokasi dipilih.
 
-Jam Digital & Auto-Refresh: Dilengkapi jam digital yang berjalan detik demi detik dan sistem auto-refresh data cuaca setiap 1 menit.
+4. Jam Digital & Auto-Refresh: Dilengkapi jam digital yang berjalan detik demi detik dan sistem auto-refresh data cuaca setiap 1 menit.
 
-Personalisasi Tampilan:
+---
+Personalisasi Tampilan
+---
 
-Dark Mode: Dukungan tema gelap dan terang.
+1. Dark Mode: Dukungan tema gelap dan terang.
 
-Konversi Satuan: Toggle antara Celsius (°C) dan Fahrenheit (°F).
+2. Konversi Satuan: Toggle antara Celsius (°C) dan Fahrenheit (°F).
 
-Sistem Favorit: Pengguna dapat menyimpan lokasi favorit yang tersimpan permanen di browser (LocalStorage).
+3. Sistem Favorit: Pengguna dapat menyimpan lokasi favorit yang tersimpan permanen di browser (LocalStorage).
 
+---
 Teknologi yang Digunakan
+---
 
-Aplikasi ini dibangun menggunakan pendekatan Native tanpa framework JavaScript yang berat:
+Aplikasi ini dibangun menggunakan:
 
-Frontend: HTML5, Tailwind CSS (via CDN).
+1. Frontend: HTML5, Tailwind CSS (via CDN).
 
-Logic: Vanilla JavaScript (ES6+).
+2. Logic: Vanilla JavaScript (ES6+).
 
-Data: JSON (JavaScript Object Notation) untuk simulasi API response.
+3. Data: JSON (JavaScript Object Notation) untuk simulasi API response.
 
-Backend (Opsional): PHP Native (tersedia di folder api/ untuk integrasi server-side).
-
+---
 Struktur Proyek
+---
 
-Proyek ini disusun dengan struktur folder yang bersih dan profesional:
+Proyek ini disusun dengan struktur folder yaitu:
 
 /edfaCuaca
 │
-├── index.html            # Halaman utama aplikasi (UI)
+├── index.html            
 │
 ├── data/
-│   └── cuaca.json        # Dataset simulasi cuaca (5 variasi skenario)
+│   └── cuaca.json        
 │
 ├── assets/
 │   ├── css/
-│   │   └── style.css     # Kustomisasi CSS (Loader, Scrollbar)
+│   │   └── style.css    
 │   └── js/
-│       └── app.js        # Logika utama aplikasi (AJAX, DOM, Event Listener)
+│       └── app.js       
 │
 └── api/
-    └── weather.php       # Backend script (opsional untuk Live API)
+    └── weather.php       
 
-
+---
 Cara Menjalankan
+---
 
 Karena aplikasi ini menggunakan fetch() untuk mengambil file JSON lokal, browser modern mungkin memblokir request ini karena kebijakan keamanan CORS jika file dibuka langsung (klik ganda index.html).
 
@@ -79,7 +83,9 @@ Pindahkan folder proyek ke htdocs (XAMPP) atau www (Laragon).
 
 Buka browser dan akses http://localhost/edfaCuaca.
 
-📝 Catatan Penggunaan Data
+---
+Catatan Penggunaan Data
+---
 
 Dalam versi demo ini, aplikasi menggunakan metode Simulasi Data Lokal:
 
@@ -89,7 +95,10 @@ Data diambil dari data/cuaca.json yang berisi 5 skenario cuaca berbeda.
 
 Setiap kali pengguna memilih provinsi, sistem akan memilih salah satu skenario secara acak agar data terlihat bervariasi.
 
-👨‍💻 Penulis
+---
+Penulis
+---
 
-[Nama Kamu]
-Tugas Akhir Praktikum Pemrograman Web - Modul 6
+M. Azmi Edfa Alhafizh
+Tugas Akhir Praktikum Pemrograman Web - Judul 6
+---
