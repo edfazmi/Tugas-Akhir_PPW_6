@@ -1,83 +1,136 @@
----
-edfaCuaca 
----
+# edfaCuaca
+
+edfaCuaca adalah aplikasi dashboard cuaca interaktif berbasis web yang dikembangkan sebagai pemenuhan **Tugas Akhir Modul 6 (AJAX & Web Service)**.  
+Aplikasi ini mensimulasikan pemanggilan data cuaca secara **asinkron (AJAX)** dan menampilkannya melalui antarmuka yang modern, responsif, dan mudah digunakan.
 
 ---
-edfaCuaca adalah aplikasi dashboard cuaca interaktif berbasis web yang dikembangkan sebagai pemenuhan Tugas Akhir Modul 6 (AJAX & Web Service). Aplikasi ini mensimulasikan pemanggilan data cuaca secara asinkron (AJAX) dengan tampilan antarmuka modern dan responsif.
----
 
+## 🚀 Fitur Utama
 
-Fitur Unggulan
----
+### 1. Pencarian Wilayah Cerdas  
+Mendukung pencarian **38 Provinsi di Indonesia** dengan fitur autocomplete dan filter otomatis.
 
-1. Pencarian Wilayah Cerdas: Mendukung pencarian 38 Provinsi di Indonesia dengan fitur autocomplete dan filter otomatis.
-
-2. Data Cuaca Dinamis: Menampilkan kondisi cuaca saat ini (Suhu, Kelembaban, Angin) dan ramalan cuaca untuk 5 hari ke depan.
-
-3. Simulasi Data Real-time: Menggunakan variasi skenario data JSON (Cerah, Hujan, Badai, dll) yang diacak (randomized) untuk mensimulasikan perubahan cuaca setiap kali lokasi dipilih.
-
-4. Jam Digital & Auto-Refresh: Dilengkapi jam digital yang berjalan detik demi detik dan sistem auto-refresh data cuaca setiap 1 menit.
+**Screenshot:**  
+`![Gambar 1 - Fitur Pencarian Provinsi](./screenshots/gambar1_pencarian.png)`
 
 ---
-Personalisasi Tampilan
----
 
-1. Dark Mode: Dukungan tema gelap dan terang.
+### 2. Data Cuaca Dinamis  
+Menampilkan informasi:
+- Suhu  
+- Kelembaban  
+- Kecepatan angin  
+- Ikon cuaca  
+- Ramalan 5 hari ke depan  
 
-2. Konversi Satuan: Toggle antara Celsius (°C) dan Fahrenheit (°F).
-
-3. Sistem Favorit: Pengguna dapat menyimpan lokasi favorit yang tersimpan permanen di browser (LocalStorage).
-
----
-Teknologi yang Digunakan
----
-
-Aplikasi ini dibangun menggunakan:
-
-1. Frontend: HTML5, Tailwind CSS (via CDN).
-
-2. Logic: Vanilla JavaScript (ES6+).
-
-3. Data: JSON (JavaScript Object Notation) untuk simulasi API response. 
+**Screenshot:**  
+`![Gambar 2 - Data Cuaca](./screenshots/gambar2_cuaca.png)`
 
 ---
-Cara Menjalankan
----
 
-Karena aplikasi ini menggunakan fetch() untuk mengambil file JSON lokal, browser modern mungkin memblokir request ini karena kebijakan keamanan CORS jika file dibuka langsung (klik ganda index.html).
+### 3. Simulasi Data Real-time  
+Menggunakan 5 skenario cuaca JSON (cerah, hujan, badai, dll) yang dipilih secara acak.
 
-Disarankan menggunakan Local Server:
-
-Opsi 1: Menggunakan VS Code (Live Server)
-
-Buka folder proyek di Visual Studio Code.
-
-Install ekstensi Live Server.
-
-Klik kanan pada index.html lalu pilih "Open with Live Server".
-
-Opsi 2: Menggunakan XAMPP/Laragon
-
-Pindahkan folder proyek ke htdocs (XAMPP) atau www (Laragon).
-
-Buka browser dan akses http://localhost/edfaCuaca.
+**Screenshot:**  
+`![Gambar 3 - Skenario Data Cuaca](./screenshots/gambar3_skenario.png)`
 
 ---
-Catatan Penggunaan Data
----
 
-Dalam versi demo ini, aplikasi menggunakan metode Simulasi Data Lokal:
+### 4. Jam Digital & Auto-Refresh  
+- Jam berjalan real-time  
+- Data cuaca otomatis refresh setiap 1 menit  
 
-Aplikasi tidak melakukan request ke internet (Open-Meteo) untuk menghemat kuota dan memastikan stabilitas demo.
-
-Data diambil dari data/cuaca.json yang berisi 5 skenario cuaca berbeda.
-
-Setiap kali pengguna memilih provinsi, sistem akan memilih salah satu skenario secara acak agar data terlihat bervariasi.
+**Screenshot:**  
+`![Gambar 4 - Jam Digital](./screenshots/gambar4_jam.png)`
 
 ---
-Penulis
+
+## 🎨 Personalisasi Tampilan
+
+### 1. Dark Mode  
+Pengguna dapat beralih antara mode terang dan gelap.
+
+**Screenshot:**  
+`![Gambar 5 - Dark Mode](./screenshots/gambar5_darkmode.png)`
+
 ---
 
-M. Azmi Edfa Alhafizh
-Tugas Akhir Praktikum Pemrograman Web - Judul 6
+### 2. Konversi Satuan Suhu  
+Toggle antara Celsius (°C) dan Fahrenheit (°F).
+
+**Screenshot:**  
+`![Gambar 6 - Konversi Suhu](./screenshots/gambar6_satuan.png)`
+
 ---
+
+### 3. Sistem Favorit  
+Menyimpan lokasi favorit menggunakan LocalStorage agar tidak hilang ketika browser ditutup.
+
+**Screenshot:**  
+`![Gambar 7 - Lokasi Favorit](./screenshots/gambar7_favorit.png)`
+
+---
+
+## 🛠 Teknologi yang Digunakan
+
+- **HTML5**  
+- **Tailwind CSS (CDN)**  
+- **JavaScript ES6+**  
+- **JSON (simulasi API)**
+
+**Screenshot struktur folder:**  
+`![Gambar 8 - Struktur Folder](./screenshots/gambar8_folder.png)`
+
+---
+
+## 📦 Cara Menjalankan Aplikasi
+
+Karena aplikasi menggunakan **fetch()** untuk mengambil file JSON lokal, browser akan memblokir akses jika langsung dibuka (due to CORS). Gunakan local server.
+
+---
+
+### 🔹 Opsi 1: Live Server di VS Code
+
+1. Buka folder proyek di Visual Studio Code  
+2. Install ekstensi **Live Server**  
+3. Klik kanan `index.html` → **Open with Live Server**
+
+**Screenshot:**  
+`![Gambar 9 - Live Server](./screenshots/gambar9_liveserver.png)`
+
+---
+
+### 🔹 Opsi 2: XAMPP / Laragon
+
+1. Pindahkan folder proyek ke:
+   - `htdocs` (XAMPP)  
+   - `www` (Laragon)
+2. Buka browser:  
+   **http://localhost/edfaCuaca**
+
+**Screenshot:**  
+`![Gambar 10 - Akses Localhost](./screenshots/gambar10_localhost.png)`
+
+---
+
+## 📘 Catatan Penggunaan Data
+
+Aplikasi **tidak melakukan request ke internet**.  
+Semua data cuaca berasal dari:
+
+/data/cuaca.json
+
+Berisi 5 skenario cuaca yang dipilih secara acak setiap kali pengguna memilih provinsi.
+
+**Screenshot:**  
+`![Gambar 11 - JSON Cuaca](./screenshots/gambar11_json.png)`
+
+---
+
+## ✍️ Penulis
+
+**M. Azmi Edfa Alhafizh**  
+Tugas Akhir Praktikum Pemrograman Web – Judul  6 (AJAX & Web Service)
+
+---
+
