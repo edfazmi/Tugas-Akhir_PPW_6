@@ -15,7 +15,7 @@ Aplikasi ini mensimulasikan pemanggilan data cuaca secara **asinkron (AJAX)** da
 Mendukung pencarian **38 Provinsi di Indonesia** dengan fitur autocomplete dan filter otomatis.
 
 **Screenshot:**  
-`![Gambar 1 - Fitur Pencarian Provinsi](./screenshots/gambar1_pencarian.png)`
+![Gambar 1 - Fitur Pencarian Provinsi](./screenshots/gambar1_pencarian.png)
 
 ---
 
@@ -28,7 +28,7 @@ Menampilkan informasi:
 - Ramalan 5 hari ke depan  
 
 **Screenshot:**  
-`![Gambar 2 - Data Cuaca](screenshots/gambar2_cuaca.png)`
+![Gambar 2 - Data Cuaca](./screenshots/gambar2_cuaca.png)
 
 ---
 
@@ -36,7 +36,7 @@ Menampilkan informasi:
 Menggunakan 5 skenario cuaca JSON (cerah, hujan, badai, dll) yang dipilih secara acak.
 
 **Screenshot:**  
-`![Gambar 3 - Skenario Data Cuaca](screenshots/gambar3_skenario.png)`
+![Gambar 3 - Skenario Data Cuaca](./screenshots/gambar3_skenario.png)
 
 ---
 
@@ -55,7 +55,7 @@ Menggunakan 5 skenario cuaca JSON (cerah, hujan, badai, dll) yang dipilih secara
 Pengguna dapat beralih antara mode terang dan gelap.
 
 **Screenshot:**  
-`![Gambar 5 - Dark Mode](screenshots/gambar5_darkmode.png)`
+![Gambar 5 - Dark Mode](./screenshots/gambar5_darkmode.png)
 
 ---
 
@@ -63,7 +63,7 @@ Pengguna dapat beralih antara mode terang dan gelap.
 Toggle antara Celsius (°C) dan Fahrenheit (°F).
 
 **Screenshot:**  
-`![Gambar 6 - Konversi Suhu](screenshots/gambar6_satuan.png)`
+![Gambar 6 - Konversi Suhu](./screenshots/gambar6_satuan.png)
 
 ---
 
@@ -71,7 +71,7 @@ Toggle antara Celsius (°C) dan Fahrenheit (°F).
 Menyimpan lokasi favorit menggunakan LocalStorage agar tidak hilang ketika browser ditutup.
 
 **Screenshot:**  
-`![Gambar 7 - Lokasi Favorit](screenshots/gambar7_favorit.png)`
+![Gambar 7 - Lokasi Favorit](./screenshots/gambar7_favorit.png)
 
 ---
 
