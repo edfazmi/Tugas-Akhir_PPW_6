@@ -1,9 +1,13 @@
 # edfaCuaca
 
-edfaCuaca adalah aplikasi dashboard cuaca interaktif berbasis web yang dikembangkan sebagai pemenuhan **Tugas Akhir Modul 6 (AJAX & Web Service)**.  
+edfaCuaca adalah aplikasi dashboard cuaca interaktif berbasis web yang dikembangkan sebagai pemenuhan **Tugas Akhir Judul 6 (AJAX & Web Service)**.  
 Aplikasi ini mensimulasikan pemanggilan data cuaca secara **asinkron (AJAX)** dan menampilkannya melalui antarmuka yang modern, responsif, dan mudah digunakan.
 
 ---
+
+## DASHBOARD
+`![Gambar 0 - Keseluruhan Dashboard](screenshots/gambar0_keseluruhan.png)`
+
 
 ## 🚀 Fitur Utama
 
@@ -11,7 +15,7 @@ Aplikasi ini mensimulasikan pemanggilan data cuaca secara **asinkron (AJAX)** da
 Mendukung pencarian **38 Provinsi di Indonesia** dengan fitur autocomplete dan filter otomatis.
 
 **Screenshot:**  
-`![Gambar 1 - Fitur Pencarian Provinsi](./screenshots/gambar1_pencarian.png)`
+`![Gambar 1 - Fitur Pencarian Provinsi](screenshots/gambar1_pencarian.png)`
 
 ---
 
@@ -24,7 +28,7 @@ Menampilkan informasi:
 - Ramalan 5 hari ke depan  
 
 **Screenshot:**  
-`![Gambar 2 - Data Cuaca](./screenshots/gambar2_cuaca.png)`
+`![Gambar 2 - Data Cuaca](screenshots/gambar2_cuaca.png)`
 
 ---
 
@@ -32,16 +36,16 @@ Menampilkan informasi:
 Menggunakan 5 skenario cuaca JSON (cerah, hujan, badai, dll) yang dipilih secara acak.
 
 **Screenshot:**  
-`![Gambar 3 - Skenario Data Cuaca](./screenshots/gambar3_skenario.png)`
+`![Gambar 3 - Skenario Data Cuaca](screenshots/gambar3_skenario.png)`
 
 ---
 
 ### 4. Jam Digital & Auto-Refresh  
 - Jam berjalan real-time  
-- Data cuaca otomatis refresh setiap 1 menit  
+- Data cuaca otomatis refresh setiap 5 menit  
 
 **Screenshot:**  
-`![Gambar 4 - Jam Digital](./screenshots/gambar4_jam.png)`
+`![Gambar 4 - Jam Digital](screenshots/gambar4_jam.png)`
 
 ---
 
@@ -51,7 +55,7 @@ Menggunakan 5 skenario cuaca JSON (cerah, hujan, badai, dll) yang dipilih secara
 Pengguna dapat beralih antara mode terang dan gelap.
 
 **Screenshot:**  
-`![Gambar 5 - Dark Mode](./screenshots/gambar5_darkmode.png)`
+`![Gambar 5 - Dark Mode](screenshots/gambar5_darkmode.png)`
 
 ---
 
@@ -59,7 +63,7 @@ Pengguna dapat beralih antara mode terang dan gelap.
 Toggle antara Celsius (°C) dan Fahrenheit (°F).
 
 **Screenshot:**  
-`![Gambar 6 - Konversi Suhu](./screenshots/gambar6_satuan.png)`
+`![Gambar 6 - Konversi Suhu](screenshots/gambar6_satuan.png)`
 
 ---
 
@@ -67,19 +71,7 @@ Toggle antara Celsius (°C) dan Fahrenheit (°F).
 Menyimpan lokasi favorit menggunakan LocalStorage agar tidak hilang ketika browser ditutup.
 
 **Screenshot:**  
-`![Gambar 7 - Lokasi Favorit](./screenshots/gambar7_favorit.png)`
-
----
-
-## 🛠 Teknologi yang Digunakan
-
-- **HTML5**  
-- **Tailwind CSS (CDN)**  
-- **JavaScript ES6+**  
-- **JSON (simulasi API)**
-
-**Screenshot struktur folder:**  
-`![Gambar 8 - Struktur Folder](./screenshots/gambar8_folder.png)`
+`![Gambar 7 - Lokasi Favorit](screenshots/gambar7_favorit.png)`
 
 ---
 
@@ -95,9 +87,6 @@ Karena aplikasi menggunakan **fetch()** untuk mengambil file JSON lokal, browser
 2. Install ekstensi **Live Server**  
 3. Klik kanan `index.html` → **Open with Live Server**
 
-**Screenshot:**  
-`![Gambar 9 - Live Server](./screenshots/gambar9_liveserver.png)`
-
 ---
 
 ### 🔹 Opsi 2: XAMPP / Laragon
@@ -107,9 +96,6 @@ Karena aplikasi menggunakan **fetch()** untuk mengambil file JSON lokal, browser
    - `www` (Laragon)
 2. Buka browser:  
    **http://localhost/edfaCuaca**
-
-**Screenshot:**  
-`![Gambar 10 - Akses Localhost](./screenshots/gambar10_localhost.png)`
 
 ---
 
@@ -121,9 +107,6 @@ Semua data cuaca berasal dari:
 /data/cuaca.json
 
 Berisi 5 skenario cuaca yang dipilih secara acak setiap kali pengguna memilih provinsi.
-
-**Screenshot:**  
-`![Gambar 11 - JSON Cuaca](./screenshots/gambar11_json.png)`
 
 ---
 
