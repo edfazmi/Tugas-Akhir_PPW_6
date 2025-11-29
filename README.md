@@ -2,7 +2,8 @@
 edfaCuaca 
 ---
 
-edfaCuaca adalah aplikasi dashboard cuaca interaktif berbasis web yang dikembangkan sebagai pemenuhan Tugas Akhir Modul 6.4 (AJAX & Web Service). Aplikasi ini mensimulasikan pemanggilan data cuaca secara asinkron (AJAX) dengan tampilan antarmuka modern dan responsif.
+---
+edfaCuaca adalah aplikasi dashboard cuaca interaktif berbasis web yang dikembangkan sebagai pemenuhan Tugas Akhir Modul 6 (AJAX & Web Service). Aplikasi ini mensimulasikan pemanggilan data cuaca secara asinkron (AJAX) dengan tampilan antarmuka modern dan responsif.
 ---
 
 
@@ -37,29 +38,7 @@ Aplikasi ini dibangun menggunakan:
 
 2. Logic: Vanilla JavaScript (ES6+).
 
-3. Data: JSON (JavaScript Object Notation) untuk simulasi API response.
-
----
-Struktur Proyek
----
-
-Proyek ini disusun dengan struktur folder yaitu:
-
-/edfaCuaca
-│
-├── index.html            
-│
-├── data/
-│   └── cuaca.json        
-│
-├── assets/
-│   ├── css/
-│   │   └── style.css    
-│   └── js/
-│       └── app.js       
-│
-└── api/
-    └── weather.php       
+3. Data: JSON (JavaScript Object Notation) untuk simulasi API response. 
 
 ---
 Cara Menjalankan
